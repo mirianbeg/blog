@@ -7,12 +7,9 @@
         <title>Laravel</title>
     </head>
     <body>
-        <ul>
-           @foreach ($tasks as $task)
-            <li>
-              {{$task->body}}
-            </li>
-           @endforeach       
+        <h1>
+			{{$task->body}}
+        </h1>  
         </ul>
     </body>
 </html>
