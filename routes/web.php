@@ -13,7 +13,8 @@ Route::get('//tasks/{task}', 'TasksController@show');
 //    return view('tasks.show', compact('task'));
 // });
 
-
+Route::get('/posts', 'PostsController@index');
+Route::get('//posts/{post}', 'PostsController@show');
 
 
 
