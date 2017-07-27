@@ -7,18 +7,21 @@ use Validator;
 class PostsController extends Controller
 {
     public function index()
-    {
-    	return view('posts.index');
+    {   
+        $posts = Post::latest()->get(); 
+    	return view('posts.index', compact('posts'));
 
     }
-    public function show()
-    {
-    	return view('posts.show');
+    public function show(Post $post)
+    {   
+    	return view('posts.show', compact('post'));
 
     }
+
     public function create()
-    {
-    	   return view('posts.create');
+    {   
+
+    	return view('posts.create');
 
     }
    
