@@ -13,8 +13,9 @@ class Post extends Model
     'title'=> 'string',
     'body'=> 'text',
     ];
-    // public function category()
-    // {
-    // 	return $this->belongsTo('App\Models\Category');
-    // }
+
+    public function comments()
+    {
+    	return $this->hasMany(Comment::class);
+    }
 }
