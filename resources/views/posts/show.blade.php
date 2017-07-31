@@ -10,9 +10,7 @@
 </div>
 
     <div class="container">
-
       <div class="row">
-
         <div class="col-sm-8 blog-main">
 
        <H1>
@@ -32,41 +30,33 @@
            {{$comment->created_at->diffForHumans()}}&nbsp
          </strong>
            {{$comment->body}}
-
          </li>
        @endforeach
    </ul>
  </div>
-    
-   
-        </div><!-- /.blog-main -->
+    <div class="card">
+      <div class="card-block">
+      <form method="POST" action="/posts/{{$post->id}}/comments">
+       {{csrf_field()}}
 
+        <div class="form-group">
+          <textarea name="body" placeholder="Your comment here" class="form-control" required></textarea>
+        </div><!-- /.form-group -->
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Add comment</button>
+        </div><!-- /.form-group -->
+       </form> 
+
+        @include('layouts.errors')
+      </div><!-- /.card-block-->
+    </div><!-- /.card-->
+            </div><!-- /.blog-main -->
        @include('layouts.sidebar')
       </div><!-- /.row -->
-
     </div><!-- /.container -->
 
 @endsection
 
 @section ('footer')
-		
+    
 @endsection
-
-
-
-
-
-
-
-
-
- 
-
-   
-
-    
-
-    
-
-    
- 
