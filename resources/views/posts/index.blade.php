@@ -17,7 +17,6 @@
           @include('posts.post')
         @endforeach
         </div><!-- /.blog-main -->
-
        @include('layouts.sidebar')
       </div><!-- /.row -->
 
